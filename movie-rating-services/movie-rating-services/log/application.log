@@ -1,0 +1,805 @@
+2022-06-07T12:36:30.241+05:30  INFO 22104 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 22104 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T12:36:30.248+05:30  INFO 22104 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T12:36:30.291+05:30  INFO 22104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07T12:36:30.291+05:30  INFO 22104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07T12:36:30.866+05:30  INFO 22104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T12:36:31.012+05:30  INFO 22104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 1 JPA repository interfaces.
+2022-06-07T12:36:31.500+05:30  INFO 22104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T12:36:31.508+05:30  INFO 22104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T12:36:31.508+05:30  INFO 22104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T12:36:31.594+05:30  INFO 22104 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T12:36:31.594+05:30  INFO 22104 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1302 ms
+2022-06-07T12:36:31.730+05:30  INFO 22104 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T12:36:31.775+05:30  INFO 22104 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-07T12:36:31.917+05:30  INFO 22104 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07T12:36:31.997+05:30  INFO 22104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07T12:36:32.000+05:30  WARN 22104 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T12:36:32.272+05:30  INFO 22104 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fd045b2
+2022-06-07T12:36:32.275+05:30  INFO 22104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07T12:36:32.295+05:30  INFO 22104 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T12:36:32.505+05:30  INFO 22104 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T12:36:32.512+05:30  INFO 22104 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:36:32.582+05:30  WARN 22104 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T12:36:32.872+05:30  WARN 22104 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+2022-06-07T12:36:32.874+05:30  INFO 22104 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:36:32.876+05:30  INFO 22104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07T12:36:32.882+05:30  INFO 22104 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-07T12:36:32.883+05:30  INFO 22104 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-07T12:36:32.892+05:30  INFO 22104 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07T12:36:32.909+05:30 ERROR 22104 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1755) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:604) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:922) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:736) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1308) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1297) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at group.microservices.movieratingservices.REPO.MovieRatingServicesApplication.main(MovieRatingServicesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:246) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:211) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:194) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:81) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:316) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:278) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:228) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.get(Lazy.java:112) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:284) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 21 common frames omitted
+
+2022-06-07T12:37:19.828+05:30  INFO 10236 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 10236 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T12:37:19.831+05:30  INFO 10236 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T12:37:19.870+05:30  INFO 10236 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07T12:37:19.870+05:30  INFO 10236 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07T12:37:20.313+05:30  INFO 10236 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T12:37:20.404+05:30  INFO 10236 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interfaces.
+2022-06-07T12:37:20.829+05:30  INFO 10236 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T12:37:20.836+05:30  INFO 10236 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T12:37:20.836+05:30  INFO 10236 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T12:37:20.924+05:30  INFO 10236 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T12:37:20.924+05:30  INFO 10236 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1053 ms
+2022-06-07T12:37:21.039+05:30  INFO 10236 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T12:37:21.072+05:30  INFO 10236 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-07T12:37:21.174+05:30  INFO 10236 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07T12:37:21.241+05:30  INFO 10236 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07T12:37:21.245+05:30  WARN 10236 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T12:37:21.460+05:30  INFO 10236 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a30daf3
+2022-06-07T12:37:21.462+05:30  INFO 10236 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07T12:37:21.472+05:30  INFO 10236 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T12:37:21.636+05:30  INFO 10236 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T12:37:21.645+05:30  INFO 10236 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:37:21.720+05:30  WARN 10236 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T12:37:21.973+05:30  WARN 10236 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+2022-06-07T12:37:21.975+05:30  INFO 10236 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:37:21.978+05:30  INFO 10236 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07T12:37:21.984+05:30  INFO 10236 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-07T12:37:21.985+05:30  INFO 10236 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-07T12:37:21.993+05:30  INFO 10236 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07T12:37:22.010+05:30 ERROR 10236 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1755) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:604) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:922) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:736) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1308) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1297) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at group.microservices.movieratingservices.REPO.MovieRatingServicesApplication.main(MovieRatingServicesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:246) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:211) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:194) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:81) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:316) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:278) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:228) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.get(Lazy.java:112) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:284) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 21 common frames omitted
+
+2022-06-07T12:38:51.510+05:30  INFO 11532 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 11532 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T12:38:51.512+05:30  INFO 11532 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T12:38:51.548+05:30  INFO 11532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07T12:38:51.548+05:30  INFO 11532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07T12:38:52.003+05:30  INFO 11532 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T12:38:52.108+05:30  INFO 11532 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interfaces.
+2022-06-07T12:38:52.559+05:30  INFO 11532 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T12:38:52.565+05:30  INFO 11532 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T12:38:52.566+05:30  INFO 11532 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T12:38:52.652+05:30  INFO 11532 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T12:38:52.653+05:30  INFO 11532 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1104 ms
+2022-06-07T12:38:52.776+05:30  INFO 11532 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T12:38:52.807+05:30  INFO 11532 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-07T12:38:52.919+05:30  INFO 11532 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07T12:38:52.989+05:30  INFO 11532 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07T12:38:52.993+05:30  WARN 11532 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T12:38:53.220+05:30  INFO 11532 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6da5057c
+2022-06-07T12:38:53.222+05:30  INFO 11532 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07T12:38:53.233+05:30  INFO 11532 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T12:38:53.404+05:30  INFO 11532 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T12:38:53.410+05:30  INFO 11532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:38:53.475+05:30  WARN 11532 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T12:38:53.738+05:30  WARN 11532 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+2022-06-07T12:38:53.739+05:30  INFO 11532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:38:53.741+05:30  INFO 11532 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07T12:38:53.747+05:30  INFO 11532 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-07T12:38:53.748+05:30  INFO 11532 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-07T12:38:53.755+05:30  INFO 11532 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07T12:38:53.777+05:30 ERROR 11532 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1755) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:604) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:922) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:736) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1308) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1297) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at group.microservices.movieratingservices.REPO.MovieRatingServicesApplication.main(MovieRatingServicesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:246) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:211) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:194) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:81) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:316) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:278) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:228) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.get(Lazy.java:112) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:284) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 21 common frames omitted
+
+2022-06-07T12:39:26.303+05:30  INFO 19652 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 19652 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T12:39:26.307+05:30  INFO 19652 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T12:39:26.343+05:30  INFO 19652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07T12:39:26.344+05:30  INFO 19652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07T12:39:26.762+05:30  INFO 19652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T12:39:26.864+05:30  INFO 19652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interfaces.
+2022-06-07T12:39:27.266+05:30  INFO 19652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T12:39:27.272+05:30  INFO 19652 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T12:39:27.273+05:30  INFO 19652 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T12:39:27.362+05:30  INFO 19652 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T12:39:27.362+05:30  INFO 19652 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1018 ms
+2022-06-07T12:39:27.485+05:30  INFO 19652 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T12:39:27.515+05:30  INFO 19652 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-07T12:39:27.626+05:30  INFO 19652 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07T12:39:27.698+05:30  INFO 19652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07T12:39:27.703+05:30  WARN 19652 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T12:39:27.947+05:30  INFO 19652 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@273e5b5e
+2022-06-07T12:39:27.949+05:30  INFO 19652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07T12:39:27.960+05:30  INFO 19652 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T12:39:28.138+05:30  INFO 19652 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T12:39:28.144+05:30  INFO 19652 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:39:28.217+05:30  WARN 19652 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T12:39:28.483+05:30  WARN 19652 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+2022-06-07T12:39:28.485+05:30  INFO 19652 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:39:28.487+05:30  INFO 19652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07T12:39:28.493+05:30  INFO 19652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-07T12:39:28.494+05:30  INFO 19652 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-07T12:39:28.504+05:30  INFO 19652 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07T12:39:28.521+05:30 ERROR 19652 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1755) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:604) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:922) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:736) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1308) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1297) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at group.microservices.movieratingservices.REPO.MovieRatingServicesApplication.main(MovieRatingServicesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:246) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:211) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:194) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:81) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:316) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:278) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:228) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.get(Lazy.java:112) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:284) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 21 common frames omitted
+
+2022-06-07T12:40:15.030+05:30  INFO 9264 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 9264 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T12:40:15.033+05:30  INFO 9264 --- [restartedMain] g.m.m.R.MovieRatingServicesApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T12:40:15.066+05:30  INFO 9264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07T12:40:15.066+05:30  INFO 9264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07T12:40:15.498+05:30  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T12:40:15.588+05:30  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interfaces.
+2022-06-07T12:40:16.000+05:30  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T12:40:16.007+05:30  INFO 9264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T12:40:16.007+05:30  INFO 9264 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T12:40:16.092+05:30  INFO 9264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T12:40:16.092+05:30  INFO 9264 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1025 ms
+2022-06-07T12:40:16.206+05:30  INFO 9264 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T12:40:16.236+05:30  INFO 9264 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-07T12:40:16.337+05:30  INFO 9264 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07T12:40:16.400+05:30  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07T12:40:16.403+05:30  WARN 9264 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T12:40:16.626+05:30  INFO 9264 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@458910dd
+2022-06-07T12:40:16.628+05:30  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07T12:40:16.638+05:30  INFO 9264 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T12:40:16.798+05:30  INFO 9264 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T12:40:16.806+05:30  INFO 9264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:40:16.876+05:30  WARN 9264 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T12:40:17.130+05:30  WARN 9264 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+2022-06-07T12:40:17.132+05:30  INFO 9264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:40:17.134+05:30  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07T12:40:17.140+05:30  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-07T12:40:17.142+05:30  INFO 9264 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-07T12:40:17.149+05:30  INFO 9264 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07T12:40:17.166+05:30 ERROR 9264 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ratingInfoRepository' defined in group.microservices.movieratingservices.REPO.RatingInfoRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1755) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:604) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:922) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:736) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1308) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1297) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at group.microservices.movieratingservices.REPO.MovieRatingServicesApplication.main(MovieRatingServicesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class group.microservices.movieratingservices.dao.MovieRating
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-jakarta-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:246) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:211) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:194) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:81) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:316) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:278) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:228) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.util.Lazy.get(Lazy.java:112) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:284) ~[spring-data-commons-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.0.0-M4.jar:3.0.0-M4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 21 common frames omitted
+
+2022-06-07T12:43:17.461+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T12:43:17.465+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T12:43:17.515+05:30  INFO 20548 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07T12:43:17.515+05:30  INFO 20548 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07T12:43:18.029+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T12:43:18.149+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interfaces.
+2022-06-07T12:43:18.765+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T12:43:18.777+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T12:43:18.777+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T12:43:18.874+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T12:43:18.876+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1358 ms
+2022-06-07T12:43:19.045+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T12:43:19.088+05:30  INFO 20548 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-07T12:43:19.229+05:30  INFO 20548 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07T12:43:19.336+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07T12:43:19.340+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T12:43:19.596+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78f2e7b
+2022-06-07T12:43:19.597+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07T12:43:19.607+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T12:43:20.126+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T12:43:20.132+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T12:43:20.223+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T12:43:20.706+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T12:43:20.753+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T12:43:20.762+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 3.64 seconds (process running for 4.129)
+2022-06-07T12:43:31.068+05:30  INFO 20548 --- [http-nio-7779-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07T12:43:31.069+05:30  INFO 20548 --- [http-nio-7779-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07T12:43:31.069+05:30  INFO 20548 --- [http-nio-7779-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-06-07T13:28:30.382+05:30  WARN 20548 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m40s316ms198µs300ns).
+2022-06-07T13:35:02.435+05:30  INFO 20548 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:35:02.439+05:30  INFO 20548 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07T13:35:02.445+05:30  INFO 20548 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-07T13:35:02.506+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T13:35:02.507+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T13:35:02.655+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T13:35:02.664+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interfaces.
+2022-06-07T13:35:02.749+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T13:35:02.749+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T13:35:02.750+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T13:35:02.783+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T13:35:02.783+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 274 ms
+2022-06-07T13:35:02.814+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T13:35:02.820+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-06-07T13:35:02.821+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T13:35:02.838+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@638ba1ac
+2022-06-07T13:35:02.839+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-06-07T13:35:02.839+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T13:35:02.864+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T13:35:02.865+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:35:02.872+05:30  WARN 20548 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'movieRatingController' defined in file [C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes\group\microservices\movieratingservices\controller\MovieRatingController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [group.microservices.movieratingservices.controller.MovieRatingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	RatingInfoRepository cannot be resolved to a type
+	Type mismatch: cannot convert from String to MovieRating
+
+2022-06-07T13:35:02.872+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:35:02.873+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-06-07T13:35:02.874+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-06-07T13:35:02.875+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-07T13:35:02.882+05:30  INFO 20548 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07T13:35:02.905+05:30 ERROR 20548 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'movieRatingController' defined in file [C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes\group\microservices\movieratingservices\controller\MovieRatingController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [group.microservices.movieratingservices.controller.MovieRatingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	RatingInfoRepository cannot be resolved to a type
+	Type mismatch: cannot convert from String to MovieRating
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:566) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:526) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:928) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:926) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:592) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:736) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1308) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1297) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at group.microservices.movieratingservices.MovieRatingServicesApplication.main(MovieRatingServicesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [group.microservices.movieratingservices.controller.MovieRatingController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	RatingInfoRepository cannot be resolved to a type
+	Type mismatch: cannot convert from String to MovieRating
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:219) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:78) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1299) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	RatingInfoRepository cannot be resolved to a type
+	Type mismatch: cannot convert from String to MovieRating
+
+	at group.microservices.movieratingservices.controller.MovieRatingController.<init>(MovieRatingController.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:206) ~[spring-beans-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 24 common frames omitted
+
+2022-06-07T13:35:24.655+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T13:35:24.656+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T13:35:24.827+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T13:35:24.837+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+2022-06-07T13:35:24.906+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T13:35:24.907+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T13:35:24.907+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T13:35:24.941+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-07T13:35:24.941+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 282 ms
+2022-06-07T13:35:24.969+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T13:35:24.973+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-06-07T13:35:24.974+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T13:35:24.990+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c3ba406
+2022-06-07T13:35:24.990+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-06-07T13:35:24.991+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T13:35:25.014+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T13:35:25.015+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:35:25.086+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T13:35:25.147+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T13:35:25.161+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T13:35:25.164+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 0.531 seconds (process running for 3128.539)
+2022-06-07T13:35:25.166+05:30  INFO 20548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-07T13:36:06.189+05:30  INFO 20548 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:36:06.189+05:30  INFO 20548 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-06-07T13:36:06.194+05:30  INFO 20548 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-06-07T13:36:06.251+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T13:36:06.252+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T13:36:06.379+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T13:36:06.391+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
+2022-06-07T13:36:06.469+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T13:36:06.470+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T13:36:06.470+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T13:36:06.502+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-07T13:36:06.502+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 248 ms
+2022-06-07T13:36:06.525+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T13:36:06.530+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-06-07T13:36:06.531+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T13:36:06.551+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31f080a6
+2022-06-07T13:36:06.551+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-06-07T13:36:06.552+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T13:36:06.578+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T13:36:06.578+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:36:06.632+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T13:36:06.679+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T13:36:06.692+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T13:36:06.694+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 0.465 seconds (process running for 3170.07)
+2022-06-07T13:36:06.695+05:30  INFO 20548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-07T13:36:15.651+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07T13:36:15.652+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07T13:36:15.652+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-06-07T13:36:52.781+05:30  INFO 20548 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:36:52.782+05:30  INFO 20548 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-06-07T13:36:52.787+05:30  INFO 20548 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-06-07T13:36:52.850+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T13:36:52.850+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T13:36:52.990+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T13:36:53.000+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+2022-06-07T13:36:53.057+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T13:36:53.058+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T13:36:53.059+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T13:36:53.090+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-07T13:36:53.090+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 238 ms
+2022-06-07T13:36:53.117+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T13:36:53.120+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-06-07T13:36:53.121+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T13:36:53.137+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34a92a54
+2022-06-07T13:36:53.137+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-06-07T13:36:53.138+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T13:36:53.160+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T13:36:53.162+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:36:53.211+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T13:36:53.256+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T13:36:53.272+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T13:36:53.275+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 0.448 seconds (process running for 3216.652)
+2022-06-07T13:36:53.276+05:30  INFO 20548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-07T13:37:02.846+05:30  INFO 20548 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:37:02.847+05:30  INFO 20548 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-06-07T13:37:02.851+05:30  INFO 20548 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2022-06-07T13:37:02.904+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T13:37:02.904+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T13:37:03.017+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T13:37:03.028+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+2022-06-07T13:37:03.083+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T13:37:03.084+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T13:37:03.085+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T13:37:03.116+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-07T13:37:03.117+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 211 ms
+2022-06-07T13:37:03.139+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T13:37:03.144+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-06-07T13:37:03.144+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T13:37:03.159+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35b72469
+2022-06-07T13:37:03.159+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-06-07T13:37:03.159+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T13:37:03.177+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T13:37:03.178+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:37:03.224+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T13:37:03.274+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T13:37:03.289+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T13:37:03.291+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 0.407 seconds (process running for 3226.668)
+2022-06-07T13:37:03.292+05:30  INFO 20548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-07T13:37:06.734+05:30  INFO 20548 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:37:06.734+05:30  INFO 20548 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-06-07T13:37:06.739+05:30  INFO 20548 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-06-07T13:37:06.791+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T13:37:06.791+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T13:37:06.895+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T13:37:06.902+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interfaces.
+2022-06-07T13:37:06.953+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T13:37:06.953+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T13:37:06.954+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T13:37:06.980+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-07T13:37:06.980+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2022-06-07T13:37:06.997+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T13:37:07.000+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-06-07T13:37:07.000+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T13:37:07.012+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b4ec188
+2022-06-07T13:37:07.012+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-06-07T13:37:07.012+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T13:37:07.028+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T13:37:07.029+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:37:07.069+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T13:37:07.099+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T13:37:07.111+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T13:37:07.113+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 0.34 seconds (process running for 3230.49)
+2022-06-07T13:37:07.114+05:30  INFO 20548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-07T13:37:09.553+05:30  INFO 20548 --- [Thread-26] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:37:09.553+05:30  INFO 20548 --- [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-06-07T13:37:09.558+05:30  INFO 20548 --- [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-06-07T13:37:09.611+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T13:37:09.611+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T13:37:09.717+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T13:37:09.724+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interfaces.
+2022-06-07T13:37:09.783+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T13:37:09.784+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T13:37:09.784+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T13:37:09.810+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-07T13:37:09.810+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 197 ms
+2022-06-07T13:37:09.832+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T13:37:09.835+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-06-07T13:37:09.836+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T13:37:09.851+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@233d7225
+2022-06-07T13:37:09.851+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-06-07T13:37:09.851+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T13:37:09.871+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T13:37:09.872+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:37:09.917+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T13:37:09.952+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T13:37:09.967+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T13:37:09.969+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 0.38 seconds (process running for 3233.346)
+2022-06-07T13:37:09.971+05:30  INFO 20548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-07T13:37:26.662+05:30  INFO 20548 --- [Thread-30] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:37:26.662+05:30  INFO 20548 --- [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-06-07T13:37:26.666+05:30  INFO 20548 --- [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-06-07T13:37:26.721+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T13:37:26.721+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T13:37:26.829+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T13:37:26.836+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interfaces.
+2022-06-07T13:37:26.890+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T13:37:26.891+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T13:37:26.891+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T13:37:26.917+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-07T13:37:26.918+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 194 ms
+2022-06-07T13:37:26.935+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T13:37:26.938+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-06-07T13:37:26.938+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T13:37:26.951+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6031d5be
+2022-06-07T13:37:26.951+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-06-07T13:37:26.952+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T13:37:26.968+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T13:37:26.969+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T13:37:27.019+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T13:37:27.052+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T13:37:27.064+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T13:37:27.065+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 0.361 seconds (process running for 3250.443)
+2022-06-07T13:37:27.067+05:30  INFO 20548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-07T13:37:54.931+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07T13:37:54.931+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07T13:37:54.932+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-07T14:19:38.675+05:30  INFO 20548 --- [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T14:19:38.676+05:30  INFO 20548 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2022-06-07T14:19:38.680+05:30  INFO 20548 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2022-06-07T14:19:38.743+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T14:19:38.743+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T14:19:38.851+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T14:19:38.861+05:30  INFO 20548 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+2022-06-07T14:19:38.926+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T14:19:38.927+05:30  INFO 20548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T14:19:38.927+05:30  INFO 20548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T14:19:38.961+05:30  INFO 20548 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-06-07T14:19:38.961+05:30  INFO 20548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 217 ms
+2022-06-07T14:19:38.981+05:30  INFO 20548 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T14:19:38.984+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-06-07T14:19:38.985+05:30  WARN 20548 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T14:19:39.001+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a4b0992
+2022-06-07T14:19:39.002+05:30  INFO 20548 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-06-07T14:19:39.002+05:30  INFO 20548 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T14:19:39.022+05:30  INFO 20548 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T14:19:39.023+05:30  INFO 20548 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T14:19:39.063+05:30  WARN 20548 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T14:19:39.100+05:30  INFO 20548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T14:19:39.112+05:30  INFO 20548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T14:19:39.114+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 0.388 seconds (process running for 5782.5)
+2022-06-07T14:19:39.115+05:30  INFO 20548 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-07T14:19:41.192+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07T14:19:41.193+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07T14:19:41.193+05:30  INFO 20548 --- [http-nio-7779-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-06-07T14:33:32.815+05:30  INFO 20548 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T14:33:32.816+05:30  INFO 20548 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2022-06-07T14:33:32.821+05:30  INFO 20548 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2022-06-07T14:33:32.881+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20548 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T14:33:32.882+05:30  INFO 20548 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T14:33:32.919+05:30  WARN 20548 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration]; nested exception is java.util.zip.ZipException: ZipFile invalid LOC header (bad signature)
+2022-06-07T14:33:32.920+05:30  INFO 20548 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07T14:33:32.923+05:30 ERROR 20548 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration]; nested exception is java.util.zip.ZipException: ZipFile invalid LOC header (bad signature)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:310) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:371) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:271) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:811) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:808) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:779) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:354) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:262) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:755) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:573) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:736) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1308) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1297) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at group.microservices.movieratingservices.MovieRatingServicesApplication.main(MovieRatingServicesApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+Caused by: java.util.zip.ZipException: ZipFile invalid LOC header (bad signature)
+	at java.base/java.util.zip.ZipFile$ZipFileInputStream.initDataOffset(ZipFile.java:920) ~[na:na]
+	at java.base/java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:931) ~[na:na]
+	at java.base/java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(ZipFile.java:448) ~[na:na]
+	at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158) ~[na:na]
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132) ~[na:na]
+	at org.springframework.asm.ClassReader.readStream(ClassReader.java:321) ~[spring-core-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.asm.ClassReader.<init>(ClassReader.java:287) ~[spring-core-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:56) ~[spring-core-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-3.0.0-SNAPSHOT.jar:3.0.0-SNAPSHOT]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:695) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getRelated(ConfigurationClassParser.java:1086) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getAnnotationAttributes(ConfigurationClassParser.java:1067) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.collectImports(ConfigurationClassParser.java:548) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.getImports(ConfigurationClassParser.java:521) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:310) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-6.0.0-SNAPSHOT.jar:6.0.0-SNAPSHOT]
+	... 29 common frames omitted
+
+2022-06-07T14:35:17.886+05:30  INFO 16980 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 16980 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T14:35:17.891+05:30  INFO 16980 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T14:35:17.944+05:30  INFO 16980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07T14:35:17.945+05:30  INFO 16980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07T14:35:18.516+05:30  INFO 16980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T14:35:18.668+05:30  INFO 16980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 1 JPA repository interfaces.
+2022-06-07T14:35:19.345+05:30  INFO 16980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T14:35:19.358+05:30  INFO 16980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T14:35:19.359+05:30  INFO 16980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T14:35:19.474+05:30  INFO 16980 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T14:35:19.476+05:30  INFO 16980 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1529 ms
+2022-06-07T14:35:19.655+05:30  INFO 16980 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T14:35:19.696+05:30  INFO 16980 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-07T14:35:19.843+05:30  INFO 16980 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07T14:35:19.941+05:30  INFO 16980 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07T14:35:19.945+05:30  WARN 16980 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T14:35:20.226+05:30  INFO 16980 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56343097
+2022-06-07T14:35:20.228+05:30  INFO 16980 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07T14:35:20.239+05:30  INFO 16980 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T14:35:20.779+05:30  INFO 16980 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T14:35:20.786+05:30  INFO 16980 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T14:35:21.129+05:30  WARN 16980 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T14:35:21.438+05:30  INFO 16980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07T14:35:21.480+05:30  INFO 16980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T14:35:21.489+05:30  INFO 16980 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 3.975 seconds (process running for 4.508)
+2022-06-07T14:49:50.470+05:30  INFO 20608 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.1 on APAC-RNISTCcZKW with PID 20608 (C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services\target\classes started by msivar789 in C:\PROJECTS\Projects_Microservices\NewMovieMicroservice\movie-rating-services\movie-rating-services)
+2022-06-07T14:49:50.474+05:30  INFO 20608 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-07T14:49:50.524+05:30  INFO 20608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07T14:49:50.524+05:30  INFO 20608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07T14:49:51.061+05:30  INFO 20608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07T14:49:51.181+05:30  INFO 20608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interfaces.
+2022-06-07T14:49:51.852+05:30  INFO 20608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7779 (http)
+2022-06-07T14:49:51.860+05:30  INFO 20608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07T14:49:51.861+05:30  INFO 20608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/10.0.21]
+2022-06-07T14:49:51.972+05:30  INFO 20608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07T14:49:51.974+05:30  INFO 20608 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1448 ms
+2022-06-07T14:49:52.172+05:30  INFO 20608 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07T14:49:52.218+05:30  INFO 20608 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-07T14:49:52.366+05:30  INFO 20608 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07T14:49:52.451+05:30  INFO 20608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07T14:49:52.455+05:30  WARN 20608 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-07T14:49:52.718+05:30  INFO 20608 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1573978c
+2022-06-07T14:49:52.719+05:30  INFO 20608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07T14:49:52.729+05:30  INFO 20608 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-07T14:49:53.239+05:30  INFO 20608 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07T14:49:53.246+05:30  INFO 20608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07T14:49:53.582+05:30  WARN 20608 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07T14:49:53.873+05:30  WARN 20608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-07T14:49:53.920+05:30  INFO 20608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7779 (http) with context path ''
+2022-06-07T14:49:53.927+05:30  INFO 20608 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 3.822 seconds (process running for 4.366)
+2022-06-07T14:49:56.492+05:30  INFO 20608 --- [http-nio-7779-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07T14:49:56.495+05:30  INFO 20608 --- [http-nio-7779-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07T14:49:56.496+05:30  INFO 20608 --- [http-nio-7779-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
