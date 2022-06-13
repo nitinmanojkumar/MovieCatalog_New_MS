@@ -3,6 +3,7 @@ package group.microservices.movieratingservices.controller;
 import java.util.List;
 import java.util.Optional;
 
+import group.microservices.movieratingservices.dao.UserRating;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,13 @@ public class MovieRatingController {
 	public List<MovieRating> getRatings_AllMovies() {
 		return repo.findAll();
 	}
-	
+
+	@RequestMapping(method=RequestMethod.GET ,value="/getAllUserRatings")
+	public UserRating getAllUserRatings() {
+		List<MovieRating> ratings=repo.findAll();
+		UserRating userRating=new UserRating();
+		userRating.setUserRating(ratings);
+		return userRating;
+	}
 	
 }

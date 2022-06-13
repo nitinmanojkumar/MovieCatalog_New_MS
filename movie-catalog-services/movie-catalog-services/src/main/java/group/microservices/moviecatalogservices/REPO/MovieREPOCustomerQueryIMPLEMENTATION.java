@@ -3,10 +3,8 @@ package group.microservices.moviecatalogservices.REPO;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import group.microservices.moviecatalogservices.dao.CatalogItem_toREPO;
-import group.microservices.moviecatalogservices.dao.ResponseClass;
+import group.microservices.moviecatalogservices.dao.CatalogItem;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
@@ -20,10 +18,10 @@ public class MovieREPOCustomerQueryIMPLEMENTATION implements MovieREPOCustomQuer
 	private EntityManager entityManager;
 
 	@Override
-	public List<CatalogItem_toREPO> findAllByProduction(String productionName) {
-		List<CatalogItem_toREPO> allItems = repo.findAll();
-		List<CatalogItem_toREPO> allMoviesByProduction = new ArrayList<>();
-		for (CatalogItem_toREPO movie : allItems) {
+	public List<CatalogItem> findAllByProduction(String productionName) {
+		List<CatalogItem> allItems = repo.findAll();
+		List<CatalogItem> allMoviesByProduction = new ArrayList<>();
+		for (CatalogItem movie : allItems) {
 			if (movie.getMovieid().equalsIgnoreCase(productionName)) {
 				allMoviesByProduction.add(movie);
 			}

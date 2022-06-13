@@ -4,7 +4,7 @@ package group.microservices.moviecatalogservices.dao;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ResponseClass {
+public class CustomResponseClass {
 
 	private String msg;
 	private String id;
