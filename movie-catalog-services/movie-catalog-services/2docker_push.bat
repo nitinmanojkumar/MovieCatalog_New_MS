@@ -1,0 +1,1 @@
+docker push nitinmanojkumar/movie-catalog:latest

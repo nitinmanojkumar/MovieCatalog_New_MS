@@ -1,0 +1,1 @@
+docker build --tag=nitinmanojkumar/movie-catalog:latest .

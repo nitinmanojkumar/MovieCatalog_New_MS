@@ -13,11 +13,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 @SpringBootApplication
 public class MovieCatalogServicesApplication {
 
+	//RestTemplate Object
 	@Bean
 	public RestTemplate getRestTemplate(){
 		return new RestTemplate();
 	}
 
+	//WebClient Object
 	@Bean
 	public WebClient.Builder getWebClientBuilder(){
 		return WebClient.builder();

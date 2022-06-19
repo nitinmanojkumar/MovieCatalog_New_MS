@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+  springbootcontainername:
+    image: nitinmanojkumar/movie-catalog:latest
+    container_name: movie-catalog
+    ports:
+      - 7777:7777
+    networks:
+      - springboot-mysql
+    depends_on:
+      - mysqlcontainername
+    command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
+ 
+  mysqlcontainername:
+    image: mysql:8
+    container_name: mysqlcontainername
+    ports:
+      - 3306:3306
+    volumes:
+      - persistent-volume-mysql:/var/lib/mysql
+    networks:
+      - springboot-mysql
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: movie-catalog
+
+networks:
+    springboot-mysql:
+        driver: bridge
+
+# volumes:
+    # persistent-volume-mysql:
+    
+    
+        
