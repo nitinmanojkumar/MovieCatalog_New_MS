@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import group.microservices.moviecatalogservices.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,16 +37,24 @@ public class MovieCatalogController {
 	private WebClient.Builder webClientBuilder;
 
 	// Get all the movies Rating
+	@Value("${spring.data.ratingservice}")
+	String ratingservice;
+	@Value("${spring.data.movieinfoservice}")
+	String movieinfoservice;
+
+
 	@RequestMapping(method = RequestMethod.GET, value = "/getRatings")
 	public List<CustomCatalogItem> getRatings_OfAll_Movies() {
+		System.out.println(ratingservice);
+		System.out.println(movieinfoservice);
 		List<CatalogItem> allMovies = repo.findAll();
 		List<CustomCatalogItem> movieCatalogwithRatings = new ArrayList<CustomCatalogItem>();
 		System.out.println(allMovies.size());
 		for (CatalogItem var : allMovies) {
 			System.out.println(var.getMovieid());
-			MovieInfo movieinfo = restTemplate.getForObject("http://localhost:7778/movieInfo/" + var.getMovieid(),
+			MovieInfo movieinfo = restTemplate.getForObject("http://"+movieinfoservice+":7778/movieInfo/" + var.getMovieid(),
 					MovieInfo.class);
-			MovieRating movierating = restTemplate.getForObject("http://localhost:7779/movieRating/" + var.getMovieid(),
+			MovieRating movierating = restTemplate.getForObject("http://"+ratingservice+":7779/movieRating/" + var.getMovieid(),
 					MovieRating.class);
 			movieCatalogwithRatings.add(new CustomCatalogItem(var.getProduction(), movieinfo.getMoviename(),
 					movieinfo.getMoviedesc(), String.valueOf(movierating.getRatings()), var.getMovieid()));
@@ -67,14 +76,14 @@ public class MovieCatalogController {
 
 			MovieInfo movieinfo=webClientBuilder.build()
 					.get()
-					.uri("http://localhost:7778/movieInfo/" + var.getMovieid())
+					.uri("http://"+movieinfoservice+":7778/movieInfo/" + var.getMovieid())
 					.retrieve()
 					.bodyToMono(MovieInfo.class)
 					.block();
 
 			MovieRating movierating=webClientBuilder.build()
 					.get()
-					.uri("http://localhost:7779/movieRating/" + var.getMovieid())
+					.uri("http://"+ratingservice+":7779/movieRating/" + var.getMovieid())
 					.retrieve()
 					.bodyToMono(MovieRating.class)
 					.block();
@@ -117,7 +126,7 @@ public class MovieCatalogController {
 	@RequestMapping(method = RequestMethod.GET, value = "/getRatingsWebClient1")
 	public ListCatalogItem getRatings_OfAll_Movies_webClient1() {
 
-		ListOfUserRating allMovieRatings= restTemplate.getForObject("http://localhost:7779/movieRating/getAllUserRatings",
+		ListOfUserRating allMovieRatings= restTemplate.getForObject("http://"+ratingservice+":7779/movieRating/getAllUserRatings",
 				ListOfUserRating.class);
 		ListCatalogItem listCatalogItem=new ListCatalogItem();
 		List<CustomCatalogItem> movieCatalogwithRatings = new ArrayList<CustomCatalogItem>();
@@ -126,7 +135,7 @@ public class MovieCatalogController {
 
 			MovieInfo movieinfo=webClientBuilder.build()
 					.get()
-					.uri("http://localhost:7778/movieInfo/" + var.getMovieid())
+					.uri("http://"+movieinfoservice+":7778/movieInfo/" + var.getMovieid())
 					.retrieve()
 					.bodyToMono(MovieInfo.class)
 					.block();
