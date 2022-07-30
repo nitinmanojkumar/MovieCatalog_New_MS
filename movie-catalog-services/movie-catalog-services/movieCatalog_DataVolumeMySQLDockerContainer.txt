@@ -6,7 +6,7 @@ docker pull mysql:8
 3. Create the container in the port providing the username and pwd as entry points
 docker create -v {source/host path}:{destination/path in the container}C:/PersistentVolume/hostmachine:/var/lib/mysql --name mysqldata_as_volumne_in_host mysql/mysql-server:8
 For Non Persistent DB use below:
-docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root --volumes-from mysqldata_as_volumne_in_host --name mysqlservercontainername mysql/mysql-server:8
+docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -v persistent-volume-mysql:/var/lib/mysql --name mysqlservercontainername mysql/mysql-server:8
 
 docker create -v {source/host path}:{destination/path in the container}C:/PersistentVolume/hostmachine:/var/lib/mysql --name mysqldata_as_volumne_in_host_notserver mysql:8
 For Persistent DB use below:
