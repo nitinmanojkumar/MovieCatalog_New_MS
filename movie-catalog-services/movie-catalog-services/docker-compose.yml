@@ -1,38 +1,61 @@
-version: "3.7"
+version: '3.7'
 
 services:
-  springbootcontainername:
+##Option 2 – Storing MySQL Data on Host Machine
+  # mysqlcontainername:
+    # image: mysql:8
+    # container_name: mysqlcontainername
+    # environment:
+      # MYSQL_ROOT_PASSWORD: root
+      # MYSQL_DATABASE: movieinfo 
+    # ports:
+      # - "3306:3306"
+    # networks:
+      # - springboot-mysql
+    # volumes:
+      # - C:\PersistentVolume\movieinfo:/var/lib/mysql
+##Option 1 – Storing MySQL Data on Docker containers but as persistent volume DB 
+  # mysqlcontainername:
+    # image: mysql:8
+    # container_name: mysqlcontainername
+    # ports:
+      # - 3306:3306
+    # volumes:
+      # - persistent-volume-mysql:/var/lib/mysql
+    # networks:
+      # - springboot-mysql
+    # environment:
+      # MYSQL_ROOT_USER: root
+      # MYSQL_ROOT_PASSWORD: root
+      # MYSQL_PASSWORD: root
+      # MYSQL_DATABASE: movie-info      
+  moviecatalogcontainername:
     image: nitinmanojkumar/movie-catalog:latest
     container_name: movie-catalog
     ports:
       - 7777:7777
     networks:
-      - springboot-mysql
+    #Telling that the below network is used to access the DB container used by other docker-compose file and declaring that network as external "foldernameofdbcomposefilelocaiton_springboot-mysql"
+      - newmoviemicroservice_springboot-mysql
+    #Exposing the below one, so that catalog can access this container as external via the below network "foldernameofmovieratingComposeFileLocation_springboot-mysql"
+      - movie-rating-services_springboot-mysql
+    #Exposing the below one, so that catalog can access this container as external via the below network "foldernameofmovieinfoComposeFileLocation_springboot-mysql"
+      - movie-info-services_springboot-mysql
     depends_on:
       - mysqlcontainername
     command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
- 
-  mysqlcontainername:
-    image: mysql:8
-    container_name: mysqlcontainername
-    ports:
-      - 3306:3306
-    volumes:
-      - persistent-volume-mysql:/var/lib/mysql
-    networks:
-      - springboot-mysql
-    environment:
-      MYSQL_ROOT_USER: root
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_PASSWORD: root
-      MYSQL_DATABASE: movie-catalog
-
+    
+# networks:
+    # springboot-mysql:
+        # driver: bridge
+        
 networks:
-    springboot-mysql:
-        driver: bridge
-
-# volumes:
-    # persistent-volume-mysql:
+    newmoviemicroservice_springboot-mysql:
+     external: true
+    movie-rating-services_springboot-mysql:
+     external: true
+    movie-info-services_springboot-mysql:
+     external: true
     
     
         

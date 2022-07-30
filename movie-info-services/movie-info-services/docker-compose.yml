@@ -1,38 +1,52 @@
-version: "3.7"
-
+version: '3.7'
 services:
-  springbootcontainername:
+##Option 2 – Storing MySQL Data on Host Machine
+  # mysqlcontainername:
+    # image: mysql:8
+    # container_name: mysqlcontainername
+    # environment:
+      # MYSQL_ROOT_PASSWORD: root
+      # MYSQL_DATABASE: movieinfo 
+    # ports:
+      # - "3306:3306"
+    # networks:
+      # - springboot-mysql
+    # volumes:
+      # - C:\PersistentVolume\movieinfo:/var/lib/mysql
+##Option 1 – Storing MySQL Data on Docker containers but as persistent volume DB 
+  # mysqlcontainername:
+    # image: mysql:8
+    # container_name: mysqlcontainername
+    # ports:
+      # - 3306:3306
+    # volumes:
+      # - persistent-volume-mysql:/var/lib/mysql
+    # networks:
+      # - springboot-mysql
+    # environment:
+      # MYSQL_ROOT_USER: root
+      # MYSQL_ROOT_PASSWORD: root
+      # MYSQL_PASSWORD: root
+      # MYSQL_DATABASE: movie-info      
+  movieinfocontainername:
     image: nitinmanojkumar/movie-info:latest
     container_name: movie-info
     ports:
       - 7778:7778
     networks:
+    #Exposing the below one, so that catalog can access this container as external via the below network "foldernameofmovieinfoComposeFileLocation_springboot-mysql"
       - springboot-mysql
+    #Telling that the below network is used to access the DB container used by other docker-compose file and declaring that network as external "foldernameofdbcomposefilelocaiton_springboot-mysql"
+      - newmoviemicroservice_springboot-mysql
     depends_on:
       - mysqlcontainername
     command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
- 
-  mysqlcontainername:
-    image: mysql:8
-    container_name: mysqlcontainername
-    ports:
-      - 3306:3306
-    volumes:
-      - persistent-volume-mysql:/var/lib/mysql
-    networks:
-      - springboot-mysql
-    environment:
-      MYSQL_ROOT_USER: root
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_PASSWORD: root
-      MYSQL_DATABASE: movie-info
-
-networks:
-    springboot-mysql:
-        driver: bridge
-
-# volumes:
-    # persistent-volume-mysql:
     
-    
+# networks:
+    # springboot-mysql:
+        # driver: bridge
         
+networks:
+    newmoviemicroservice_springboot-mysql:
+     external: true
+    springboot-mysql:

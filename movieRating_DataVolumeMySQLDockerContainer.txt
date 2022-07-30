@@ -16,8 +16,9 @@ docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined 
 docker exec -it mysqlcontainername bash
 Inside the mysql bash:
 	mysql -uroot -proot
-	create database ratingdataservice;
+	create database movieinfo;
 	show databases;
+	use movieinfo;
 	use ratingdataservice;
 	drop table ratingdataservice.newratings;
 	CREATE TABLE ratingdataservice.newratings (
@@ -31,8 +32,6 @@ Inside the mysql bash:
 	insert into ratingdataservice.newratings(ratings,movieid) values(3.9,LOWER('harrypotter3'));
 	insert into ratingdataservice.newratings(ratings,movieid) values(3.5,LOWER('jumanji2'));
 	insert into ratingdataservice.newratings(ratings,movieid) values(4.7,LOWER('spiderman3'));
-
-	Select * from ratingdataservice.newratings;
 
 5. Run the spring boot project jar image as container
 docker run -p 7776:7776 -d --network springboot-mysql --name springbootcontainername spring-boot-library-microservice	
