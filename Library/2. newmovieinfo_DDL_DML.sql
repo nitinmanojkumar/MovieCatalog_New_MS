@@ -6,11 +6,6 @@ CREATE TABLE movieinfo.newmovielist (
     moviename varchar(255) not null
 );
 
-insert into movieinfo.newmovielist(movieid,moviedesc,moviename)
-values((LOWER('avengers1'),'The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name.','The Avengers'),
-('Warner Bros','harrypotter2'),('Warner Bros','HarryPotter3'),('Sony','Spiderman3'),('Sony','Jumanji2')
-,('Walt Disney','Avengers2'),('Walt Disney','Avengers1'));
-
 insert into movieinfo.newmovielist(movieid,moviedesc,moviename) values(LOWER('avengers1'),'The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name.','The Avengers');
 insert into movieinfo.newmovielist(movieid,moviedesc,moviename) values(LOWER('avengers2'),'Age of Ultron is a 2015 American superhero film based on the Marvel Comics superhero team the Avengers','Avengers: Age of Ultron');
 insert into movieinfo.newmovielist(movieid,moviedesc,moviename) values(LOWER('harrypotter2'),'An ancient prophecy seems to be coming true when a mysterious presence begins stalking the corridors of a school of magic and leaving its victims paralyzed.','Harry Potter and the Chamber of Secrets');

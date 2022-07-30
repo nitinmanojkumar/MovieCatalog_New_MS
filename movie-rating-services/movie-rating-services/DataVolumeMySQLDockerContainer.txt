@@ -6,11 +6,11 @@ docker pull mysql:8
 3. Create the container in the port providing the username and pwd as entry points
 docker create -v {source/host path}:{destination/path in the container}C:/PersistentVolume/hostmachine:/var/lib/mysql --name mysqldata_as_volumne_in_host mysql/mysql-server:8
 For Non Persistent DB use below:
-docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root --volumes-from mysqldata_as_volumne_in_host --name mysqlservercontainername mysql/mysql-server:8
+docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -v persistent-volume-mysql:/var/lib/mysql --name mysqlservercontainername mysql/mysql-server:8
 
 docker create -v {source/host path}:{destination/path in the container}C:/PersistentVolume/hostmachine:/var/lib/mysql --name mysqldata_as_volumne_in_host_notserver mysql:8
 For Persistent DB use below:
-docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo --volumes-from mysqldata_as_volumne_in_host_notserver --name mysqlcontainername mysql:8
+docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo -v persistent-volume-mysql:/var/lib/mysql --name mysqlcontainername mysql:8
 
 4. Open mysql container in bash
 docker exec -it mysqlcontainername bash
@@ -19,13 +19,19 @@ Inside the mysql bash:
 	create database movieinfo;
 	show databases;
 	use movieinfo;
-	CREATE TABLE storage2(book_name varchar(50),id varchar(50),isbn varchar(50),aisle int,author varchar(50),PRIMARY KEY (id));
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('CypressDocker','abcd4','abcd','4','Rahul');
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('DevopsDocker','fdsefr343','fdsefr3','43','Rahul');
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('DevopsDocker','ddy22','ddy','22','Shetty');
-	SET SQL_SAFE_UPDATES = 0;
-	delete from storage2 where isbn='111';
-	select * from storage2;
+	use ratingdataservice;
+	drop table ratingdataservice.newratings;
+	CREATE TABLE ratingdataservice.newratings (
+		ratings float(11) not null,
+		movieid varchar(255) primary key not null
+	);
+
+	insert into ratingdataservice.newratings(ratings,movieid) values(4.3,LOWER('avengers1'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(4.1,LOWER('avengers2'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(4.0,LOWER('harrypotter2'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(3.9,LOWER('harrypotter3'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(3.5,LOWER('jumanji2'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(4.7,LOWER('spiderman3'));
 
 5. Run the spring boot project jar image as container
 docker run -p 7776:7776 -d --network springboot-mysql --name springbootcontainername spring-boot-library-microservice	
@@ -36,7 +42,7 @@ docker pull mysql:8
 
 docker volume create persistent-volume-mysql
 For Non Persistent DB use below:
-docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo --volumes-from mysqldata_as_volumne_in_host_notserver --name mysqlcontainername mysql:8
+docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo -v persistent-volume-mysql:/var/lib/mysql --name mysqlcontainername mysql:8
 (OR)
 docker volume create persistent-volume-mysql
 For Persistent DB use below:
@@ -47,13 +53,19 @@ docker exec -it mysqlcontainername bash
 	create database movieinfo;
 	show databases;
 	use movieinfo;
-	CREATE TABLE storage2(book_name varchar(50),id varchar(50),isbn varchar(50),aisle int,author varchar(50),PRIMARY KEY (id));
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('CypressDocker','abcd4','abcd','4','Rahul');
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('DevopsDocker','fdsefr343','fdsefr3','43','Rahul');
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('DevopsDocker','ddy22','ddy','22','Shetty');
-	SET SQL_SAFE_UPDATES = 0;
-	delete from storage2 where isbn='111';
-	select * from storage2;
+	use ratingdataservice;
+	drop table ratingdataservice.newratings;
+	CREATE TABLE ratingdataservice.newratings (
+		ratings float(11) not null,
+		movieid varchar(255) primary key not null
+	);
+
+	insert into ratingdataservice.newratings(ratings,movieid) values(4.3,LOWER('avengers1'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(4.1,LOWER('avengers2'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(4.0,LOWER('harrypotter2'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(3.9,LOWER('harrypotter3'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(3.5,LOWER('jumanji2'));
+	insert into ratingdataservice.newratings(ratings,movieid) values(4.7,LOWER('spiderman3'));
 docker run -p 7776:7776 -d --network springboot-mysql --name springbootcontainername nitinmanojkumar/spring-boot-library-microservice
 <<<<<<< HEAD
 

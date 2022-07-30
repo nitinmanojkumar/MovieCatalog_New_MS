@@ -10,7 +10,7 @@ docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined 
 
 docker create -v {source/host path}:{destination/path in the container}C:/PersistentVolume/hostmachine:/var/lib/mysql --name mysqldata_as_volumne_in_host_notserver mysql:8
 For Persistent DB use below:
-docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo --volumes-from mysqldata_as_volumne_in_host_notserver --name mysqlcontainername mysql:8
+docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo -v persistent-volume-mysql:/var/lib/mysql --name mysqlcontainername mysql:8
 
 4. Open mysql container in bash
 docker exec -it mysqlcontainername bash
@@ -19,13 +19,19 @@ Inside the mysql bash:
 	create database movieinfo;
 	show databases;
 	use movieinfo;
-	CREATE TABLE storage2(book_name varchar(50),id varchar(50),isbn varchar(50),aisle int,author varchar(50),PRIMARY KEY (id));
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('CypressDocker','abcd4','abcd','4','Rahul');
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('DevopsDocker','fdsefr343','fdsefr3','43','Rahul');
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('DevopsDocker','ddy22','ddy','22','Shetty');
-	SET SQL_SAFE_UPDATES = 0;
-	delete from storage2 where isbn='111';
-	select * from storage2;
+	use catalogmovie;
+	drop table catalogmovie.movielist;
+	CREATE TABLE catalogmovie.movielist (
+		production varchar(255) not null,
+		movieid varchar(255) primary key not null
+	);
+
+	insert into catalogmovie.movielist(production,movieid) values('Walt Disney',LOWER('Avengers2'));
+	insert into catalogmovie.movielist(production,movieid) values('Walt Disney',LOWER('Avengers1'));
+	insert into catalogmovie.movielist(production,movieid) values('Warner Bros',LOWER('harrypotter2'));
+	insert into catalogmovie.movielist(production,movieid) values('Warner Bros',LOWER('HarryPotter3'));
+	insert into catalogmovie.movielist(production,movieid) values('Sony',LOWER('Spiderman3'));
+	insert into catalogmovie.movielist(production,movieid) values('Sony',LOWER('Jumanji2'));
 
 5. Run the spring boot project jar image as container
 docker run -p 7776:7776 -d --network springboot-mysql --name springbootcontainername spring-boot-library-microservice	
@@ -36,7 +42,7 @@ docker pull mysql:8
 
 docker volume create persistent-volume-mysql
 For Non Persistent DB use below:
-docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo --volumes-from mysqldata_as_volumne_in_host_notserver --name mysqlcontainername mysql:8
+docker run -p 3306:3306 -d --cap-add=sys_nice --security-opt seccomp=unconfined --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo -v persistent-volume-mysql:/var/lib/mysql --name mysqlcontainername mysql:8
 (OR)
 docker volume create persistent-volume-mysql
 For Persistent DB use below:
@@ -47,13 +53,19 @@ docker exec -it mysqlcontainername bash
 	create database movieinfo;
 	show databases;
 	use movieinfo;
-	CREATE TABLE storage2(book_name varchar(50),id varchar(50),isbn varchar(50),aisle int,author varchar(50),PRIMARY KEY (id));
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('CypressDocker','abcd4','abcd','4','Rahul');
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('DevopsDocker','fdsefr343','fdsefr3','43','Rahul');
-	INSERT INTO storage2(book_name,id,isbn,aisle,author) values('DevopsDocker','ddy22','ddy','22','Shetty');
-	SET SQL_SAFE_UPDATES = 0;
-	delete from storage2 where isbn='111';
-	select * from storage2;
+	use catalogmovie;
+	drop table catalogmovie.movielist;
+	CREATE TABLE catalogmovie.movielist (
+		production varchar(255) not null,
+		movieid varchar(255) primary key not null
+	);
+
+	insert into catalogmovie.movielist(production,movieid) values('Walt Disney',LOWER('Avengers2'));
+	insert into catalogmovie.movielist(production,movieid) values('Walt Disney',LOWER('Avengers1'));
+	insert into catalogmovie.movielist(production,movieid) values('Warner Bros',LOWER('harrypotter2'));
+	insert into catalogmovie.movielist(production,movieid) values('Warner Bros',LOWER('HarryPotter3'));
+	insert into catalogmovie.movielist(production,movieid) values('Sony',LOWER('Spiderman3'));
+	insert into catalogmovie.movielist(production,movieid) values('Sony',LOWER('Jumanji2'));
 docker run -p 7776:7776 -d --network springboot-mysql --name springbootcontainername nitinmanojkumar/spring-boot-library-microservice
 <<<<<<< HEAD
 
