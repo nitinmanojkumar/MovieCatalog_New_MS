@@ -39,9 +39,9 @@ services:
       - springboot-mysql
     #Telling that the below network is used to access the DB container used by other docker-compose file and declaring that network as external "foldernameofdbcomposefilelocaiton_springboot-mysql"
       - newmoviemicroservice_springboot-mysql
-    depends_on:
-      - mysqlcontainername
-    command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
+    # depends_on:
+      # - mysqlcontainername
+    # command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
     
 # networks:
     # springboot-mysql:

@@ -41,9 +41,9 @@ services:
       - movie-rating-services_springboot-mysql
     #Exposing the below one, so that catalog can access this container as external via the below network "foldernameofmovieinfoComposeFileLocation_springboot-mysql"
       - movie-info-services_springboot-mysql
-    depends_on:
-      - mysqlcontainername
-    command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
+    # depends_on:
+      # - mysqlcontainername
+    # command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
     
 # networks:
     # springboot-mysql:

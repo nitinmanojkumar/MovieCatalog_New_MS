@@ -29,38 +29,38 @@ services:
       # MYSQL_PASSWORD: root
       # MYSQL_DATABASE: movie-info      
 
-  moviecatalogcontainername:
-    image: nitinmanojkumar/movie-catalog:latest
-    container_name: movie-catalog
-    ports:
-      - 7777:7777
-    networks:
-      - springboot-mysql
-    depends_on:
-      - mysqlcontainername
-    command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
+  # moviecatalogcontainername:
+    # image: nitinmanojkumar/movie-catalog:latest
+    # container_name: movie-catalog
+    # ports:
+      # - 7777:7777
+    # networks:
+      # - springboot-mysql
+    # depends_on:
+      # - mysqlcontainername
+    # command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
     
-  movieinfocontainername:
-    image: nitinmanojkumar/movie-info:latest
-    container_name: movie-info
-    ports:
-      - 7778:7778
-    networks:
-      - springboot-mysql
-    depends_on:
-      - mysqlcontainername
-    command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
+  # movieinfocontainername:
+    # image: nitinmanojkumar/movie-info:latest
+    # container_name: movie-info
+    # ports:
+      # - 7778:7778
+    # networks:
+      # - springboot-mysql
+    # depends_on:
+      # - mysqlcontainername
+    # command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
 
-  movieratingcontainername:
-    image: nitinmanojkumar/movie-rating:latest
-    container_name: movie-rating
-    ports:
-      - 7779:7779
-    networks:
-      - springboot-mysql
-    depends_on:
-      - mysqlcontainername
-    command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
+  # movieratingcontainername:
+    # image: nitinmanojkumar/movie-rating:latest
+    # container_name: movie-rating
+    # ports:
+      # - 7779:7779
+    # networks:
+      # - springboot-mysql
+    # depends_on:
+      # - mysqlcontainername
+    # command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
     
 networks:
     springboot-mysql:
