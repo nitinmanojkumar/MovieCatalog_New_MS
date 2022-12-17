@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: replicatecontrollerdemo
+  labels: 
+    app: replicatecontrollerdemo
+spec:
+  replicas: 2
+  # selector:
+  #   app: myapp
+  template:
+    metadata:
+      name: replicatecontrollerdemotemplate
+      labels:
+        app: replicatecontrollerdemotemplate
+    spec:
+      containers:
+        - name: nginxrcdemo
+          image: nginx
+          

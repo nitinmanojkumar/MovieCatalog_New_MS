@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-replicaset-movieinfo
+  labels:
+    app: myapp1
+    type: myapp-replicaset-movieinfo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: myapp-replicaset-movieinfo
+  template:
+    metadata:
+      name: myapp-prod
+      labels:
+        app: myapp1
+        type: myapp-replicaset-movieinfo
+    spec:
+      containers:
+        - name: movie-info-demo
+          image: nitinmanojkumar/movie-info:latest

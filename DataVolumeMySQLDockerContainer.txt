@@ -1,0 +1,16 @@
+Inshort:
+docker network create springboot-mysql
+docker pull mysql:8
+
+docker volume create persistent-volume-mysql
+For Persistent DB use below:
+docker run -p 3306:3306 -d --network springboot-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=movieinfo -v persistent-volume-mysql:/var/lib/mysql --name mysqlcontainername mysql:8
+pause
+docker run -p 7778:7778 -d --network springboot-mysql --name movieinfocontainer nitinmanojkumar/movie-info:latest
+pause
+echo start springboot docker container in 7777
+docker run -p 7777:7777 -d --network springboot-mysql --name moviecatalogcontainer nitinmanojkumar/movie-catalog:latest
+pause
+echo start springboot docker container in 7779
+docker run -p 7779:7779 -d --network springboot-mysql --name movieratingcontainer nitinmanojkumar/movie-rating:latest
+pause
