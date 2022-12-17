@@ -10,16 +10,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import group.microservices.moviecatalogservices.REPO.MovieCatalogREPO;
 import group.microservices.moviecatalogservices.SERVICES.MovieCatalog_SERVICE;
 import org.springframework.web.reactive.function.client.WebClient;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/catalog")
 public class MovieCatalogController {
@@ -56,8 +53,8 @@ public class MovieCatalogController {
 					MovieInfo.class);
 			MovieRating movierating = restTemplate.getForObject("http://"+ratingservice+":7779/movieRating/" + var.getMovieid(),
 					MovieRating.class);
-			movieCatalogwithRatings.add(new CustomCatalogItem(var.getProduction(), movieinfo.getMoviename(),
-					movieinfo.getMoviedesc(), String.valueOf(movierating.getRatings()), var.getMovieid()));
+			movieCatalogwithRatings.add(new CustomCatalogItem(var.getProduction(), var.getMovieid(), movieinfo.getMoviename(),
+					movieinfo.getMoviedesc(), String.valueOf(movierating.getRatings())));
 
 		}
 		return movieCatalogwithRatings;

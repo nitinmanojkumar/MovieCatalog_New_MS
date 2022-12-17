@@ -1,0 +1,58 @@
+2022-12-17T18:41:36.027+05:30  INFO 2172 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.3.1 with PID 2172 (C:\STS_Projects\MovieCatalogRating_BookLibrary_Service\MovieCatalogRating_BookLibrary_Service\movie-rating-services\movie-rating-services\target\classes started by nitin in C:\STS_Projects\MovieCatalogRating_BookLibrary_Service\MovieCatalogRating_BookLibrary_Service\movie-rating-services)
+2022-12-17T18:41:36.030+05:30  INFO 2172 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-12-17T18:41:36.084+05:30  INFO 2172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-17T18:41:36.085+05:30  INFO 2172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-17T18:41:36.906+05:30  INFO 2172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17T18:41:37.324+05:30  INFO 2172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 381 ms. Found 1 JPA repository interfaces.
+2022-12-17T18:41:37.866+05:30 ERROR 2172 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2022-12-17T18:41:38.513+05:30  INFO 2172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7780 (http)
+2022-12-17T18:41:38.532+05:30  INFO 2172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17T18:41:38.533+05:30  INFO 2172 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-17T18:41:38.655+05:30  INFO 2172 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17T18:41:38.656+05:30  INFO 2172 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2570 ms
+2022-12-17T18:41:38.705+05:30  INFO 2172 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17T18:41:39.063+05:30  INFO 2172 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63153aa4
+2022-12-17T18:41:39.066+05:30  INFO 2172 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17T18:41:39.085+05:30  INFO 2172 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/ratingdataservice?useSSL=false&allowPublicKeyRetrieval=true'
+2022-12-17T18:41:39.360+05:30  INFO 2172 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17T18:41:39.469+05:30  INFO 2172 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-17T18:41:39.900+05:30  WARN 2172 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-17T18:41:40.258+05:30  INFO 2172 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-12-17T18:41:41.873+05:30  INFO 2172 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17T18:41:41.900+05:30  INFO 2172 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17T18:41:42.673+05:30  WARN 2172 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-17T18:41:43.339+05:30  INFO 2172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-17T18:41:43.443+05:30  INFO 2172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7780 (http) with context path ''
+2022-12-17T18:41:43.468+05:30  INFO 2172 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 7.996 seconds (process running for 8.523)
+2022-12-17T18:42:03.864+05:30  INFO 2172 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17T18:42:03.869+05:30  INFO 2172 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17T18:42:03.884+05:30  INFO 2172 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-17T18:49:41.031+05:30  INFO 18840 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Starting MovieRatingServicesApplication using Java 17.0.3.1 with PID 18840 (C:\STS_Projects\MovieCatalogRating_BookLibrary_Service\MovieCatalogRating_BookLibrary_Service\movie-rating-services\movie-rating-services\target\classes started by nitin in C:\STS_Projects\MovieCatalogRating_BookLibrary_Service\MovieCatalogRating_BookLibrary_Service\movie-rating-services)
+2022-12-17T18:49:41.035+05:30  INFO 18840 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-12-17T18:49:41.088+05:30  INFO 18840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-17T18:49:41.088+05:30  INFO 18840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-17T18:49:41.907+05:30  INFO 18840 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17T18:49:42.183+05:30  INFO 18840 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 264 ms. Found 1 JPA repository interfaces.
+2022-12-17T18:49:42.737+05:30 ERROR 18840 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2022-12-17T18:49:43.295+05:30  INFO 18840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7780 (http)
+2022-12-17T18:49:43.310+05:30  INFO 18840 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17T18:49:43.311+05:30  INFO 18840 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-17T18:49:43.417+05:30  INFO 18840 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17T18:49:43.417+05:30  INFO 18840 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2328 ms
+2022-12-17T18:49:43.475+05:30  INFO 18840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17T18:49:43.731+05:30  INFO 18840 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5734b925
+2022-12-17T18:49:43.733+05:30  INFO 18840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17T18:49:43.745+05:30  INFO 18840 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/ratingdataservice?useSSL=false&allowPublicKeyRetrieval=true'
+2022-12-17T18:49:43.996+05:30  INFO 18840 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17T18:49:44.092+05:30  INFO 18840 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-17T18:49:44.396+05:30  WARN 18840 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-17T18:49:44.632+05:30  INFO 18840 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-12-17T18:49:45.471+05:30  INFO 18840 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17T18:49:45.478+05:30  INFO 18840 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17T18:49:46.141+05:30  WARN 18840 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-17T18:49:46.752+05:30  WARN 18840 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-12-17T18:49:46.806+05:30  INFO 18840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7780 (http) with context path ''
+2022-12-17T18:49:46.865+05:30  INFO 18840 --- [restartedMain] g.m.m.MovieRatingServicesApplication     : Started MovieRatingServicesApplication in 6.405 seconds (process running for 6.938)
+2022-12-17T18:50:05.065+05:30  INFO 18840 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17T18:50:05.069+05:30  INFO 18840 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17T18:50:05.078+05:30  INFO 18840 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

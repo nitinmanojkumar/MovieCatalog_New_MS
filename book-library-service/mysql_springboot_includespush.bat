@@ -12,5 +12,5 @@ call 1createDOCKERimage.bat
 echo Pushing Docker Image
 call 2docker_push.bat
 echo start springboot docker container in 7776
-docker run -p 7776:7776 -d --network springboot-mysql --name springbootcontainername nitinmanojkumar/spring-boot-library-microservice
+docker run -p 7776:7776 -d --network springboot-mysql --name booklibrarycontainer nitinmanojkumar/spring-boot-library-microservice
 pause

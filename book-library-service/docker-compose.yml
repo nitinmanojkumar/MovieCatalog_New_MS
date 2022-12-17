@@ -1,9 +1,9 @@
 version: "3.7"
 
 services:
-  springbootcontainername:
+  booklibrarycontainer :
     image: nitinmanojkumar/spring-boot-library-microservice:latest
-    container_name: springbootcontainername
+    container_name: booklibrarycontainer
     ports:
       - 7776:7776
     networks:

@@ -1,1 +1,1 @@
-docker run -p 7776:7776 --network springboot-mysql -d --name springbootcontainername spring-boot-library-microservice
+docker run -p 7776:7776 --network springboot-mysql -d --name booklibrarycontainer spring-boot-library-microservice

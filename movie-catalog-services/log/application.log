@@ -1,0 +1,92 @@
+2022-12-17T18:41:01.408+05:30  INFO 15196 --- [restartedMain] g.m.m.MovieCatalogServicesApplication    : Starting MovieCatalogServicesApplication using Java 17.0.3.1 with PID 15196 (C:\STS_Projects\MovieCatalogRating_BookLibrary_Service\MovieCatalogRating_BookLibrary_Service\movie-catalog-services\movie-catalog-services\target\classes started by nitin in C:\STS_Projects\MovieCatalogRating_BookLibrary_Service\MovieCatalogRating_BookLibrary_Service\movie-catalog-services)
+2022-12-17T18:41:01.411+05:30  INFO 15196 --- [restartedMain] g.m.m.MovieCatalogServicesApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-12-17T18:41:01.466+05:30  INFO 15196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-17T18:41:01.467+05:30  INFO 15196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-17T18:41:02.158+05:30  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17T18:41:02.329+05:30  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 1 JPA repository interfaces.
+2022-12-17T18:41:02.705+05:30 ERROR 15196 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2022-12-17T18:41:03.040+05:30  INFO 15196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2022-12-17T18:41:03.050+05:30  INFO 15196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17T18:41:03.050+05:30  INFO 15196 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-17T18:41:03.116+05:30  INFO 15196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17T18:41:03.117+05:30  INFO 15196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1649 ms
+2022-12-17T18:41:03.149+05:30  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17T18:41:03.315+05:30  INFO 15196 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ab9e733
+2022-12-17T18:41:03.317+05:30  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17T18:41:03.326+05:30  INFO 15196 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/catalogmovie?useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10'
+2022-12-17T18:41:03.449+05:30  INFO 15196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17T18:41:03.498+05:30  INFO 15196 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-17T18:41:03.695+05:30  WARN 15196 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-17T18:41:03.875+05:30  INFO 15196 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-12-17T18:41:04.455+05:30  INFO 15196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17T18:41:04.462+05:30  INFO 15196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17T18:41:04.938+05:30  WARN 15196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-17T18:41:05.226+05:30  INFO 15196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-17T18:41:05.241+05:30  WARN 15196 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2022-12-17T18:41:05.252+05:30  INFO 15196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17T18:41:05.255+05:30  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17T18:41:05.267+05:30  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-17T18:41:05.270+05:30  INFO 15196 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-17T18:41:05.284+05:30  INFO 15196 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2022-12-17T18:41:05.303+05:30 ERROR 15196 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 7777 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7777 or configure this application to listen on another port.
+
+2022-12-17T18:49:47.790+05:30  INFO 21672 --- [restartedMain] g.m.m.MovieCatalogServicesApplication    : Starting MovieCatalogServicesApplication using Java 17.0.3.1 with PID 21672 (C:\STS_Projects\MovieCatalogRating_BookLibrary_Service\MovieCatalogRating_BookLibrary_Service\movie-catalog-services\movie-catalog-services\target\classes started by nitin in C:\STS_Projects\MovieCatalogRating_BookLibrary_Service\MovieCatalogRating_BookLibrary_Service\movie-catalog-services)
+2022-12-17T18:49:47.794+05:30  INFO 21672 --- [restartedMain] g.m.m.MovieCatalogServicesApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-12-17T18:49:47.861+05:30  INFO 21672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-17T18:49:47.862+05:30  INFO 21672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-17T18:49:48.902+05:30  INFO 21672 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17T18:49:49.197+05:30  INFO 21672 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 280 ms. Found 1 JPA repository interfaces.
+2022-12-17T18:49:49.712+05:30 ERROR 21672 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2022-12-17T18:49:50.157+05:30  INFO 21672 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7781 (http)
+2022-12-17T18:49:50.176+05:30  INFO 21672 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17T18:49:50.178+05:30  INFO 21672 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-17T18:49:50.296+05:30  INFO 21672 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17T18:49:50.296+05:30  INFO 21672 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2433 ms
+2022-12-17T18:49:50.334+05:30  INFO 21672 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17T18:49:50.524+05:30  INFO 21672 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@761b1eb3
+2022-12-17T18:49:50.526+05:30  INFO 21672 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17T18:49:50.538+05:30  INFO 21672 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/catalogmovie?useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10'
+2022-12-17T18:49:50.692+05:30  INFO 21672 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17T18:49:50.762+05:30  INFO 21672 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-17T18:49:50.986+05:30  WARN 21672 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-17T18:49:51.163+05:30  INFO 21672 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-12-17T18:49:51.863+05:30  INFO 21672 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17T18:49:51.873+05:30  INFO 21672 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17T18:49:52.624+05:30  WARN 21672 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-17T18:49:52.937+05:30  WARN 21672 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-12-17T18:49:52.950+05:30  WARN 21672 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2022-12-17T18:49:52.965+05:30  INFO 21672 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17T18:49:52.969+05:30  INFO 21672 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17T18:49:52.979+05:30  INFO 21672 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-17T18:49:52.983+05:30  INFO 21672 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-17T18:49:52.997+05:30  INFO 21672 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2022-12-17T18:49:53.017+05:30 ERROR 21672 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 7781 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7781 or configure this application to listen on another port.
+
