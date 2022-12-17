@@ -52,6 +52,17 @@ services:
       - mysqlcontainername
     command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
     
+  booklibrarycontainername:
+    image: nitinmanojkumar/spring-boot-library-microservice:latest
+    container_name: booklibrarycontainer
+    ports:
+      - 7776:7776
+    networks:
+      - springboot-mysql
+    depends_on:
+      - mysqlcontainername
+    command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
+    
 volumes:
   persistent-volume-mysql:
     external: true
