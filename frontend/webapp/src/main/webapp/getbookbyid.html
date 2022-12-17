@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title> ID Information </title>
+    <meta charset="UTF-8">
+    <p>ID information below</p>  
+    <input type="text" id = "idDetails" value=""> 
+	<input type = "button"  value = "GetDetails">
+	
+	<br></br>
+	<input type = "button"  value = "Modify">
+	<br></br>
+	
+	<form action="./getbooks.html" >
+		<input type = "submit" onclick="deleteRecord()" value = "Delete">
+	</form>
+	
+	<script>
+	var theUrl = "http://localhost:7776/library/deleteBook";
+	const urlParams = new URLSearchParams(window.location.search);
+	const myParam = urlParams.get('id');
+	var id = {"id": myParam};
+	console.log(id);
+
+
+	function deleteRecord(){
+		var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+		xmlhttp.open("DELETE", theUrl);
+		xmlhttp.setRequestHeader("Content-Type", "application/json");
+		xmlhttp.send(JSON.stringify(id));
+		window.alert("hey");
+		
+		}
+	
+		function getqueryString(){
+			
+			document.getElementById("idDetails").value=myParam;
+			//window.alert(myParam);
+		}
+			window.onload = function(){
+			getqueryString();
+		}
+    </script>
+</head>
+
+</html>

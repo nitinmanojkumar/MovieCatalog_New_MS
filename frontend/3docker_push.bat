@@ -1,0 +1,1 @@
+docker push nitinmanojkumar/tomcat-movie-front-end-image:latest

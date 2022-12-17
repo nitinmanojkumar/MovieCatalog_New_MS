@@ -1,0 +1,1 @@
+docker build -t nitinmanojkumar/tomcat-movie-front-end-image:latest .

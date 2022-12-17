@@ -1,0 +1,62 @@
+<html>
+  <head>
+	<link rel="stylesheet" href="mytable.css">
+	<background>
+    <title> Person Information </title>
+    <meta charset="UTF-8">
+    <p>Click the below button to see all the books</p>  
+    <input type = "button" onclick = "loadPersons()" value = "Display">
+	</form>
+	<table id="myTable">
+		<tr>
+			<th>production</th>
+			<th>movieid</th>
+			<th>moviename</th>
+			<th>moviedesc</th>
+			<th>rating</th>	
+		</tr>
+	</table>
+	
+    </background>
+    <script>
+      var baseurl = "http://localhost:7777/catalog/getRatings";
+      function loadPersons(){
+		var tableHeaderRowCount = 1;
+		var table = document.getElementById('myTable');
+		var rowCount = table.rows.length;
+		for (var i = tableHeaderRowCount; i < rowCount; i++) {
+			table.deleteRow(tableHeaderRowCount);
+		}
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET",baseurl ,true);
+		xmlhttp.setRequestHeader("Access-Control-Allow-Origin", "http://localhost:7777");
+		xmlhttp.setRequestHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, HEAD, OPTIONS");
+		xmlhttp.setRequestHeader("Access-Control-Allow-Credentials", "true");
+        xmlhttp.onreadystatechange = function() {
+          if(xmlhttp.readyState ===4 && xmlhttp.status ===200){
+            var persons = JSON.parse(xmlhttp.responseText);
+            var table = document.getElementById("myTable");
+            //main table content we fill from data from the rest call
+            for (i = 1,x=0; i < persons.length+1; i++,x++){
+			var row = table.insertRow(i);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			var cell5 = row.insertCell(4);
+			
+			
+			cell1.innerHTML=persons[x].production;
+			cell2.innerHTML=persons[x].movieid;
+			cell3.innerHTML=persons[x].moviename;
+			cell4.innerHTML=persons[x].moviedesc;
+			cell5.innerHTML="<a href='./getbookbyid.html?id="+persons[x].production+"'>"+persons[x].production+"</a>";
+			}
+            
+          }
+        };
+        xmlhttp.send(null);
+      }
+    </script>
+  </head>
+</html>
