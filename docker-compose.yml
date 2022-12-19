@@ -63,6 +63,16 @@ services:
       - mysqlcontainername
     command: sh -c './wait-for mysqlcontainername:3306 -- npm start'
     
+  frontendcontainername:
+    image: nitinmanojkumar/tomcat-movie-front-end-image:latest
+    container_name: frontendtomcatcontainer
+    ports:
+      - 8090:8080
+    networks:
+      - springboot-mysql
+    depends_on:
+      - moviecatalogcontainername
+    
 volumes:
   persistent-volume-mysql:
     external: true
