@@ -1,0 +1,37 @@
+Start a cluster using the docker driver:
+	minikube start --driver=docker
+To make docker the default driver:
+	minikube config set driver docker
+	minikube status
+	
+kubectl get nodes
+kubectl get pods
+kubectl describe pod "podname"
+kubectl get pods -o wide
+
+Example of NodePort
+Create a Kubernetes deployment
+Create a Kubernetes service type NodePort
+Check Node Port
+Run service tunnel
+	kubectl create deployment hello-minikube1 --image=k8s.gcr.io/echoserver:1.4
+	kubectl expose deployment hello-minikube1 --type=NodePort --port=8080
+	kubectl get svc/kubectl get service
+	kubectl get deployment
+	minikube service hello-minikube1 --url
+	kubectl delete deployment hello-minikube1
+	kubectl delete service hello-minikube1
+	
+Example of LoadBalancer
+Create a Kubernetes deployment
+Create a Kubernetes service with type LoadBalancer
+Check the external IP
+	minikube tunnel
+	kubectl create deployment hello-minikube1 --image=k8s.gcr.io/echoserver:1.4
+	kubectl expose deployment hello-minikube1 --type=LoadBalancer --port=8080
+	kubectl get svc/kubectl get service
+	kubectl get deployment
+	kubectl delete deployment hello-minikube1
+	kubectl delete service hello-minikube1
+	minikube tunnel --cleanup
+	
