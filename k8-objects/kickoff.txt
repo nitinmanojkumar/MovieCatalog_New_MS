@@ -8,6 +8,7 @@ kubectl get nodes
 kubectl get pods
 kubectl describe pod "podname"
 kubectl get pods -o wide
+kubectl edit pod/replicaset/rc/deployment/svc "name of the object" --record        -----------> to edit the yaml file
 
 Example of NodePort
 Create a Kubernetes deployment
@@ -35,3 +36,58 @@ Check the external IP
 	kubectl delete service hello-minikube1
 	minikube tunnel --cleanup
 	
+RUN PODS:
+kubectl apply -f pod.xml
+kubectl delete pod "podname"
+
+DELETE PODS:
+kubectl delete --all pods --namespace=default
+
+
+REPLICASET / REPLICA CONTROLLER:
+kubectl create -f "name of the replicaset yaml file" --record
+kubectl get replicaset
+kubectl get rc
+kubectl describe replicaset "replicaet name"
+kubectl delete replicaset "name of the replicaset"
+
+UPDATE / REPLACE ReplicaSet or Replication Controller:
+kubectl replace -f "replacaset/rc yaml file"
+
+SCALE / UPDATE / REPLACE ReplicaSet or Replication Controller:
+kubectl scale --replicas=6 -f "replacaset/rc yaml file"
+
+
+DEPLOYMENTS: --> Deployment is k8 object to do seamless update without changing all the pods at once and rollback if necessary.
+kubectl create -f "name of the deployments yaml file" --record
+kubectl get deployments
+kubectl get replicaset
+kubectl get pods
+kubectl describe deployment "deployment name"
+kubectl delete deployment "deployment name"
+
+DEPLOYMENT ROLLOUT:
+kubectl rollout status deployment/"name of the deployment"    -----> to check the rollout status of the deployment
+
+UPDATE THE DEPLOYMENT VERSION:
+kubectl create -f "name of the deployments yaml file" --record
+kubectl edit deployment "name of the deployment" --record        -----------> to edit the yaml file
+kubectl set image deployment/"name of the deployment" "name of the container"="name of the image from docker hub":"version of the image" --record
+kubectl set image deployment/"name of the deployment" "name of the container"="name of the dockerhub image and version" --record
+kubectl rollout history deployment/"name of the deployment"    -----> to check the rollout history of the deployment
+
+UNDO ROLLOUT THE DEPLOYMENT:
+kubectl rollout undo deployment/"name of the deployment"	-----> to undo the rollout or rollback to the previous version of the deployment
+
+{{{
+kubectl rollout status deployment/myapp-deployment-replicaset-pod    -----> to check the rollout status of the deployment
+kubectl create -f 5Deployments.yaml --record
+kubectl edit deployment myapp-deployment-replicaset-pod --record        -----------> to edit the yaml file
+kubectl set image deployment/myapp-deployment-replicaset-pod frontend-deploymentcreated=nitinmanojkumar/tomcat-movie-front-end-image:1.0.1 --record
+kubectl rollout history deployment/myapp-deployment-replicaset-pod    -----> to check the rollout history of the deployment
+kubectl rollout undo deployment/myapp-deployment-replicaset-pod	-----> to undo the rollout or rollback to the previous version of the deployment
+}}}}
+
+
+TO GET ALL THE OBJECTS AT ONCE:
+kubectl get all

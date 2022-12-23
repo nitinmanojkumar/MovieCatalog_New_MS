@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment-replicaset-pod
+  labels:
+    app: myapp2
+    type: front-end2
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: myapp
+      type: front-end
+  template:
+    metadata:
+      name: frontendui
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: frontend-deploymentcreated
+          image: nitinmanojkumar/tomcat-movie-front-end-image:latest
