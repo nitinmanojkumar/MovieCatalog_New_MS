@@ -1,4 +1,4 @@
-kubectl delete deployments myapp-deployment-replicaset-pod
+kubectl delete deployments myapp-deployment-pod
 kubectl get pods
 kubectl get replicaset
 pause

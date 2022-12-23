@@ -1,23 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment-replicaset-pod
+  name: nginx-deployment
   labels:
-    app: myapp
-    # type: front-end
+    app: nginx
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: myapp
-      # type: front-end
+      app: nginx
   template:
     metadata:
       name: frontendui
       labels:
-        app: myapp
-        # type: front-end
+        app: nginx
     spec:
       containers:
-        - name: nginx-deploy-container
+        - name: nginx-deployment-container
           image: nginx
