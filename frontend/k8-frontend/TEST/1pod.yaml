@@ -7,8 +7,8 @@ metadata:
     # type: front-end
 spec:
   containers:
-    - name: frontend-podcreated
-      image: nitinmanojkumar/tomcat-movie-front-end-image:latest
+    - name: nginx-pod-container
+      image: nginx
 # apiVersion: v1
 # kind: Pod
 # metadata:

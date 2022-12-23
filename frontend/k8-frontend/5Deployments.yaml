@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: myapp-deployment-replicaset-pod
   labels:
-    app: myapp2
-    type: front-end2
+    app: myapp
+    # type: front-end
 spec:
   replicas: 6
   selector:
     matchLabels:
       app: myapp
-      type: front-end
+      # type: front-end
   template:
     metadata:
       name: frontendui
       labels:
         app: myapp
-        type: front-end
+        # type: front-end
     spec:
       containers:
         - name: frontend-deploymentcreated
